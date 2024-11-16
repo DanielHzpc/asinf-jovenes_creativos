@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: lightgray gray;
+}
+
+*::-webkit-scrollbar-thumb{
+  background: rgba(255, 255, 255, .2);
+  border-radius: 10px;
+}
+
+.img_white{
+  filter: invert(99%) sepia(99%) saturate(6%) hue-rotate(119deg) brightness(103%) contrast(103%);
+}
+
