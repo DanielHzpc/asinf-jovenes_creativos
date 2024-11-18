@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LoginPage from './pages/LoginPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
 import {NextUIProvider} from "@nextui-org/react";
+import BlogPage from './pages/Blog/BlogPage.jsx'
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <RegisterPage />
+  },
+  {
+    path: "/blog",
+    element: <BlogPage />
   }
 ]) 
 
