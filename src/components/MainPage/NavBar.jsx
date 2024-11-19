@@ -48,7 +48,7 @@ function NavBar() {
 
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className="text-white sm:hidden"
         />
 
         <NavbarBrand>

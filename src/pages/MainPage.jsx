@@ -3,7 +3,7 @@ import './MainPage.css'
 import ReactImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import { Link } from 'react-router-dom'
-import {Button} from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import Know from '../components/MainPage/Know'
 
 
@@ -26,7 +26,7 @@ function MainPage() {
 
           <div className='wa'>
             <Button as={Link} size='lg' to={'/register'} className='bg-[#66997b]'> Registrarse </Button>
-            <Button as={Link} to={'#explore'} size='lg' className='bg-[#66997b]'>Explorar</Button>
+            <a href='#explore' className='z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 text-medium gap-3 rounded-large [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground hover:opacity-80 bg-[#66997b]'> Explorar </a>
           </div>
         </div>
 
