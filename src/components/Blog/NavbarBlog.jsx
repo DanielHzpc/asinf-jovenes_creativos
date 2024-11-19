@@ -76,7 +76,7 @@ function NavbarBlog() {
       <NavbarContent justify='center' className='hidden sm:flex gap-4'>
 
         <NavbarItem isActive>
-          <Link className='text-white' to={"/blog"} >Blogs</Link>
+          <Link className='text-white' to={"/blogs"} >Blogs</Link>
         </NavbarItem>
 
         <NavbarItem>
