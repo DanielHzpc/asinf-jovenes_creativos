@@ -4,6 +4,9 @@ import MainBlog from '../../components/Blog/MainBlog'
 import Footer from '../../components/MainPage/Footer'
 
 function BlogPage() {
+
+  document.title="Blogs"
+
   return (
     <>
       <NavbarBlog />

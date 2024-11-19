@@ -6,6 +6,8 @@ import { EyeSlashFilledIcon } from '../components/Login-Register/EyeSlashFilledI
 
 function LoginPage() {
 
+  document.title="Iniciar Sesion"
+
   const navigate = useNavigate()
 
   const submit = async (event) => {

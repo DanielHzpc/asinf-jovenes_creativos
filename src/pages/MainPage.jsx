@@ -9,6 +9,8 @@ import Know from '../components/MainPage/Know'
 
 function MainPage() {
 
+  document.title="Aventuras sin Fin"
+
   const images = [
     { original: "/foto1.jpg" },
     { original: "/foto2.jpg" },

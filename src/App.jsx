@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import MainPage from './pages/mainPage'
+import MainPage from './pages/MainPage'
 import NavBar from './components/MainPage/NavBar'
 import Footer from './components/MainPage/Footer'
 

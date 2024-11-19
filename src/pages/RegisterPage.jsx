@@ -7,6 +7,7 @@ import { EyeSlashFilledIcon } from '../components/Login-Register/EyeSlashFilledI
 
 function RegisterPage() {
 
+  document.title="Registrarse"
   const navigate = useNavigate()
 
   const submit = (e) => {
