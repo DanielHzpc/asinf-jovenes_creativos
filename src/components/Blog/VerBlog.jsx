@@ -12,7 +12,7 @@ function VerBlog() {
     return (
         <>
             {blogs?.map((blog) => (
-                <Link className="w-[40vh] h-[25vh] inline-block hover:shadow-xl ml-5 mr-5 mb-5 md:h-[35vh] lg:h-[45vh]" key={blog.id} to={`/blog/${blog.id}`} >
+                <Link className="w-[40vh] h-[25vh] inline-block hover:shadow-xl ml-5 mr-5 mb-5 md:h-[35vh] lg:h-[45vh]" key={blog.id} to={`/blogs/${blog.id}`} >
                     <div className="bg-white rounded-xl w-full h-full shadow-md overflow-hidden">
                         <img src={blog.image} alt={blog.title} className="h-20 w-full object-cover md:h-40 lg:h-56" />
                         <div className="p-3 md:p-5 lg:p-8">

@@ -6,20 +6,32 @@ import {
     NavbarItem, 
     NavbarMenuToggle,
     NavbarMenu,
-    NavbarMenuItem
+    NavbarMenuItem,
+
+    Avatar
   } from "@nextui-org/react";
 import { Link } from 'react-router-dom';
 import { Button } from '@nextui-org/react';
 
 function NavbarBlog() {
 
+  const user = JSON.parse(window.localStorage.getItem("loggedUser"))
+
+  const handleLogout = () => {
+    window.localStorage.removeItem('loggedUser')
+  }
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
     "Blogs",
     "Mis Blogs",
-    "Cerrar Sesion"
   ];
+
+  const menuLinks = [
+    "/blogs",
+    "/misblogs",
+  ]
 
   return (
     <>
@@ -75,7 +87,10 @@ function NavbarBlog() {
 
       <NavbarContent justify='end' className='hidden sm:flex gap-4'>
         <NavbarItem>
-          <Button variant='flat' className= 'text-[#27081d] bg-[#66997b]'>Cerrar Sesion</Button>
+          <Avatar showFallback src={user.image} name={user.name} />
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link} to={'/'} variant='flat' className= 'text-[#27081d] bg-[#66997b]' onClick={handleLogout}>Cerrar Sesion</Button>
         </NavbarItem>
       </NavbarContent>
 
@@ -84,17 +99,16 @@ function NavbarBlog() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
               className="w-full"
               href="#"
               size="lg"
+              to={menuLinks[index]}
             >
               {item}
             </Link>
           </NavbarMenuItem>
         ))}
+        <Button as={Link} to={'/'} onClick={handleLogout} className='bg-[#66997b] mt-5' > Cerrar Sesion </Button>
       </NavbarMenu>
 
         
