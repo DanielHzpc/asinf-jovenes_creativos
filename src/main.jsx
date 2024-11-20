@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
 import {NextUIProvider} from "@nextui-org/react";
 import BlogPage from './pages/Blog/BlogPage.jsx'
+import ViewBlog from './pages/Blog/ViewBlog.jsx'
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/blogs",
     element: <BlogPage />
+  },
+  {
+    path: "/blogs/1",
+    element: <ViewBlog />
   }
 ]) 
 
