@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useFetch } from "./useFetch";
 import PersonBlog from "./PersonBlog";
-import blogs_ids from "./blogsIds";
+import { addRoute } from "../../services/routerConfig";
 
 function VerBlog() {
     const { data: blogs, loading } = useFetch(
@@ -11,9 +11,11 @@ function VerBlog() {
 
     useEffect(() => {
         if (blogs) {
-            console.log("IDs de los blogs:", blogs.map((blog) => blogs_ids.push(blog.id)));
+          // Extrae los IDs y agrega las rutas dinámicas
+          const blogs_ids = blogs.map((blog) => blog.id);
+          addRoute(blogs_ids);
         }
-    }, [blogs]);
+      }, [blogs]);
 
     if (loading) return <p>Cargando Blogs ...</p>;
 

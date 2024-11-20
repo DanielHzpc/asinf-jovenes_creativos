@@ -16,7 +16,7 @@ function RegisterPage() {
     const data = {};
 
     data["name"] = e.target.name.value
-    data["lastName"] = e.target.lastName.value
+    data["lastname"] = e.target.lastname.value
     data["email"] = e.target.email.value
     data["password"] = e.target.password.value
 
@@ -56,7 +56,7 @@ function RegisterPage() {
           <h1 className='mb-5 text-3xl lg:text-4xl font-bold lg:mb-10'>Registrarse</h1>
 
           <Input type='text' name='name' label='Nombre' variant='bordered' placeholder='Ingresa tu Nombre' size='lg' isRequired className='w-[90%] lg:w-[50%] mb-5' />
-          <Input type='text' name='lastName' label='Apellidos' variant='bordered' placeholder='Ingresa tus Apellidos' size='lg' isRequired className='w-[90%] lg:w-[50%] mb-5' />
+          <Input type='text' name='lastname' label='Apellidos' variant='bordered' placeholder='Ingresa tus Apellidos' size='lg' isRequired className='w-[90%] lg:w-[50%] mb-5' />
           <Input type='email' name='email' label='Email' variant='bordered' placeholder='Ingresa tu email' size='lg' isRequired className='w-[90%] lg:w-[50%] mb-5' />
           <Input 
            typeof=''
