@@ -1,16 +1,15 @@
 import React from 'react'
 import './App.css'
-import MainPage from './pages/MainPage'
-import NavBar from './components/MainPage/NavBar'
-import Footer from './components/MainPage/Footer'
+import { BrowserRouter } from 'react-router-dom'
+import { AppRouter } from './services/router'
 
 function App() {
 
   return (
     <>
-      <NavBar />
-      <MainPage />
-      <Footer />
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
     </>
   )
 }

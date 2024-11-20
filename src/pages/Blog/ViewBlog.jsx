@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '@nextui-org/react';
 
 
-function ViewBlog() {
+function ViewBlog({idb}) {
 
-    const {data:blog , loading } = useFetch("https://673a371b339a4ce44517933d.mockapi.io/api/v1/blog/1") 
+    const {data:blog , loading } = useFetch("https://673a371b339a4ce44517933d.mockapi.io/api/v1/blog/"+idb) 
 
     if (loading) return <p className='flex justify-center items-center'>Cargando blog....</p>;
 
