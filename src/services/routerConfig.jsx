@@ -3,12 +3,14 @@ import RegisterPage from "../pages/RegisterPage.jsx";
 import BlogPage from "../pages/Blog/BlogPage.jsx";
 import HomePage from "../pages/HomePage.jsx";
 import ViewBlog from "../pages/Blog/ViewBlog.jsx"
+import MisBlogs from "../pages/MisBlogs/MisBlogs.jsx";
 
 export const routes = [
   { path: "/", element: <HomePage /> },
   { path: "/login", element: <LoginPage /> },
   { path: "/register", element: <RegisterPage /> },
   { path: "/blogs", element: <BlogPage /> },
+  { path: "/misblogs" , element: <MisBlogs /> }
 ];
 
 export const addRoute = (blogs_ids) => {

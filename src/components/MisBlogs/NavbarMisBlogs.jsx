@@ -13,7 +13,7 @@ import {
 import { Link } from 'react-router-dom';
 import { Button } from '@nextui-org/react';
 
-function NavbarBlog() {
+function NavbarMisBlogs() {
 
   const user = JSON.parse(window.localStorage.getItem("loggedUser"))
 
@@ -67,7 +67,7 @@ function NavbarBlog() {
 
         <NavbarBrand justify='start'>
           <img src="/icon.svg" alt="" className='navBar-img' />
-          <p className='text-white'>Blogs</p>
+          <p className='text-white'>Mis Blogs</p>
         </NavbarBrand>
 
       </NavbarContent>
@@ -75,11 +75,11 @@ function NavbarBlog() {
 
       <NavbarContent justify='center' className='hidden sm:flex gap-4'>
 
-        <NavbarItem isActive>
+        <NavbarItem>
           <Link className='text-white' to={"/blogs"} >Blogs</Link>
         </NavbarItem>
 
-        <NavbarItem>
+        <NavbarItem isActive>
           <Link className='text-white' to={"/misblogs"}>Mis Blogs</Link>
         </NavbarItem>
 
@@ -118,4 +118,4 @@ function NavbarBlog() {
   )
 }
 
-export default NavbarBlog
+export default NavbarMisBlogs
