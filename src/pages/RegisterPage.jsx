@@ -31,12 +31,9 @@ function RegisterPage() {
       console.log("new user create")
     })
 
-    window.localStorage.setItem(
-      'loggedUser', JSON.stringify(data)
-    )
-
     if (data) {
-      navigate("/blogs")
+      alert("Cuenta creada exitosamente, porfavor inicia sesion")
+      navigate("/login")
     } else{
       alert("Hubo un error al momento de crear una cuenta")
     }
