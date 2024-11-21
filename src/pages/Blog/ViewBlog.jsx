@@ -31,7 +31,7 @@ function ViewBlog({idb}) {
                     <p className='text-xl lg:text-2xl text-gray-600 w-[50%]'>{blog.description}</p>
                 </div>
                 <p className='text-xl mb-2 font-bold'>Contenido:</p>
-                <p className='w-[90%] text-xl lg:w-full lg:text-2xl text-gray-600'>{blog.content}</p>
+                <p className='w-[90%] text-xl lg:w-full lg:text-2xl text-gray-600 mb-10'>{blog.content}</p>
 
             </div>
 
