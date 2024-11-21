@@ -10,7 +10,6 @@ function NavBar() {
 
   const menuItems = [
     "Inicio",
-    "Registrarse",
   ];
 
   return (
