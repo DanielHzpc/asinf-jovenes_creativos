@@ -8,6 +8,8 @@ function LoginPage() {
 
   document.title="Iniciar Sesion"
 
+  window.localStorage.removeItem("loggedUser")
+
   const navigate = useNavigate()
 
   const submit = async (event) => {

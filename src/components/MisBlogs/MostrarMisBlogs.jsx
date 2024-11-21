@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useFetch } from '../Blog/useFetch';
 import { Link } from 'react-router-dom';
 
@@ -38,7 +38,7 @@ function MostrarMisBlogs() {
             </>
           )
     } catch {
-        return (<p className='text-center'>NO TIENES BLOGS CREADOS</p>)
+        return (<p className='text-center font-bold text-xl'>NO TIENES BLOGS CREADOS</p>)
     }
    
 
