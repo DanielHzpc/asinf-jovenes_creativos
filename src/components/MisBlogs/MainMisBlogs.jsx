@@ -5,6 +5,8 @@ import ModelCreateBlogs from './ModelCreateBlogs'
 
 function MainMisBlogs() {
 
+    document.title = "Mis Blogs"
+
     const user = JSON.parse(window.localStorage.getItem("loggedUser"))
 
   return (
@@ -25,7 +27,7 @@ function MainMisBlogs() {
 
             <div>
                 <div className='bg-white h-[15rem] w-[20rem] rounded-xl shadow-md flex flex-col items-center justify-center mt-10 mb-10 lg:mt-0 lg:h-[15rem]  lg:w-[25rem]'>
-                    <p className='text-xl mb-5 font-bold lg:text-2xl'>Crea tu Blog {console.log(user)}</p>
+                    <p className='text-xl mb-5 font-bold lg:text-2xl'>Crea tu Blog</p>
                     <ModelCreateBlogs id={user.id} />
                 </div>
             </div>

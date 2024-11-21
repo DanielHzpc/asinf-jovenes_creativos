@@ -5,6 +5,7 @@ import { deleteBlog } from './deleteBlog';
 function ModelDeleteBlogs({id}) {
 
     const user = JSON.parse(window.localStorage.getItem("loggedUser"))
+    
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     const handleDelete = async (userId, idBlog) => {
@@ -15,7 +16,6 @@ function ModelDeleteBlogs({id}) {
             console.error("Error al borrar el blog:", error);
         }
     };
-    
 
     return (
         <> 
@@ -28,14 +28,7 @@ function ModelDeleteBlogs({id}) {
                     <ModalBody>
                         <p>Estas seguro de borrar este blog?</p>
                         <div className='flex justify-around mt-5'>
-                            <Button 
-                                color="danger" 
-                                size='lg' 
-                                variant="light" 
-                                onClick={() => handleDelete(user.id, id)} // Aquí se usa una función anónima
-                            >
-                                Si
-                            </Button>
+                            <Button color="danger" size='lg' variant="light" onClick={() => handleDelete(user.id, id)}> Si </Button>
                             <Button color="danger" size='lg' variant="light" onPress={onClose}> No </Button>
                         </div>
                     </ModalBody>

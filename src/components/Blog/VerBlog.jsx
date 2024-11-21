@@ -11,7 +11,6 @@ function VerBlog() {
 
     useEffect(() => {
         if (blogs) {
-          // Extrae los IDs y agrega las rutas dinámicas
           const blogs_ids = blogs.map((blog) => blog.id);
           addRoute(blogs_ids);
         }

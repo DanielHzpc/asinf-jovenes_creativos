@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 
-// Hook genérico para cualquier API
 export function useFetch(url) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        let isMounted = true; // Bandera para evitar actualizaciones si el componente se desmonta
+        let isMounted = true;
 
         setLoading(true);
         fetch(url)
@@ -18,16 +17,14 @@ export function useFetch(url) {
                 if (isMounted) setLoading(false);
             });
 
-        // Cleanup al desmontar el componente
         return () => {
             isMounted = false;
         };
     }, [url]);
 
-    return { data, loading }; // Retorno como objeto
+    return { data, loading };
 }
 
-// Hook específico para datos de un usuario
 export function userBlog(user) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -52,5 +49,5 @@ export function userBlog(user) {
         };
     }, [user]);
 
-    return [data, loading]; // Retorno como arreglo, sin cambiar la estructura
+    return [data, loading];
 }
